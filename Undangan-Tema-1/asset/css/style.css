@@ -617,133 +617,7 @@ span.love-mt-2{
         padding-left: 30px;
     }
 
-    @media (min-width: 325px) and (max-width: 469px) {
-    .componen-left{
-        width: 14rem;
-        z-index: -1;
-    }
-
-    .componen-right{
-        width: 10rem;
-        z-index: -1;
-    }
-
-    .flower-right-2{
-        margin-top: -200px;
-        width: 20rem;
-        z-index: -1;
-    }
-
-    .flower-left-2{
-        margin-top: -250px;
-        width: 17rem;
-        z-index: -1;
-    }
-
-    .flower-right-3{
-        display: none;
-    }
-
-    .flower-left-3{
-        display: none;
-    }
-
-    .flower-right-4{
-        display: none;
-    }
-
-    .flower-left-4{
-        display: none;
-    }
-
-    .waves {
-        height: 40px;
-        min-height: 40px;
-    }
-
-    .w-shadow-1{
-    width: 40rem; height: 13rem;
-}
-
-    /* navbar */
-    .navbar{
-        height: 4rem;
-        max-width: 350px !important;
-    }
-
-    .nav-buttom{
-        height: 4rem;
-    }
-
-    .radius-nav{
-        border-radius: 30px 30px 0px 0px;
-    }
-
-    .flex-fill{
-        width: 4.3em;
-    }
-
-    .icon-nav-buttom-b{
-        width: 1.5em;
-    }
-
-    .icon-nav-buttom-m{
-        width: 1.5em;
-    }
-
-    .icon-nav-buttom-a{
-        width: 1.5em;
-    }
-
-    .nav-title{
-        font-size: 13px;
-    }
-
-    .app-font-1{
-        font-size:14px;
-    }
-
-    .w-shadow-1{
-        width: 18.5rem; height: 16rem;
-    }
-
-    span.icon-love {
-        margin-right: 10px;
-    }
-
-    .p-time{
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    .mt-100{
-        margin-top: 40px;
-    }
-
-    span.line-one {
-        height: 270px;
-        left:22px;
-    }
-
-    span.line-last {
-        height: 144px;
-    }
-
-    .width-ctuk-1{
-        width: 23rem;
-    }
-
-    .width-maps-1{
-        width: 23rem;
-    }
-
-    .wh-maps{
-        width: 22rem;
-        border:0;
-    }
-}
-
-    @media (min-width: 200px) and (max-width: 324px) {
+@media (min-width: 325px) and (max-width: 469px) {
     .componen-left{
         width: 14rem;
         z-index: -1;
@@ -866,6 +740,152 @@ span.love-mt-2{
     .wh-maps{
         width: 22rem;
         border:0;
+    }
+
+    .size-mobile{
+        font-size: 15px;
+    }
+
+    .size-mobile{
+        font-size: 14px;
+    }
+
+    .font-size-55{
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 324px) {
+    .componen-left{
+        width: 14rem;
+        z-index: -1;
+    }
+
+    .componen-right{
+        width: 10rem;
+        z-index: -1;
+    }
+
+    .flower-right-2{
+        margin-top: -200px;
+        width: 20rem;
+        z-index: -1;
+    }
+
+    .flower-left-2{
+        margin-top: -250px;
+        width: 17rem;
+        z-index: -1;
+    }
+
+    .flower-right-3{
+        display: none;
+    }
+
+    .flower-left-3{
+        display: none;
+    }
+
+    .flower-right-4{
+        display: none;
+    }
+
+    .flower-left-4{
+        display: none;
+    }
+
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .w-shadow-1{
+        width: 40rem; height: 13rem;
+    }
+
+    /* navbar */
+    .navbar{
+        height: 4rem;
+        max-width: 350px !important;
+    }
+
+    .nav-buttom{
+        height: 4rem;
+    }
+
+    .radius-nav{
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .flex-fill{
+        width: 4.3em;
+    }
+
+    .icon-nav-buttom-b{
+        width: 1.5em;
+    }
+
+    .icon-nav-buttom-m{
+        width: 1.5em;
+    }
+
+    .icon-nav-buttom-a{
+        width: 1.5em;
+    }
+
+    .nav-title{
+        font-size: 13px;
+    }
+
+    .app-font-1{
+        font-size:14px;
+    }
+
+    .w-shadow-1{
+        width: 18.5rem; height: 16rem;
+    }
+
+    span.icon-love {
+        margin-right: 10px;
+    }
+
+    .p-time{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .mt-100{
+        margin-top: 40px;
+    }
+
+    span.line-one {
+        height: 270px;
+        left:22px;
+    }
+
+    span.line-last {
+        height: 144px;
+    }
+
+    .width-ctuk-1{
+        width: 23rem;
+    }
+
+    .width-maps-1{
+        width: 23rem;
+    }
+
+    .wh-maps{
+        width: 22rem;
+        border:0;
+    }
+
+    .size-mobile{
+        font-size: 14px;
+    }
+
+    .font-size-55{
+        font-size: 30px;
     }
 }
 
