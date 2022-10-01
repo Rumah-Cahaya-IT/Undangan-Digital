@@ -1,0 +1,612 @@
+*{
+    font-family: 'Poppins', pacifico;
+}
+
+.bg-default{
+    background-color: #F7FAFB;
+}
+
+.bg-default-2{
+    background-image: linear-gradient(to left, #01A3BC, #0D5B71);
+}
+
+.bg-default-3{
+    background-color: #DA036A;
+}
+
+.border-pink{
+    border-style: solid;
+    border-color: #C5789D;
+}
+
+.cr-default{
+    color: #DA036A;
+}
+
+.font-semibold{
+    font-weight: 500;
+}
+
+.font-400{
+    font-weight: 500;
+}
+
+.text-default{
+    color: #323F41;
+}
+
+.p-left{
+    padding-left:30px;
+}
+
+.width-icon{
+    width: 3.3rem;
+}
+
+.btn-default{
+    background-color: #01A3B9;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    pacity: 0.6;
+    transition: 0.5s;
+    font-weight: 500;
+    border: none;
+}
+
+.btn-default:hover{
+    background-color: #2E6A7F;
+    color: #ffffff;
+}
+
+.btn-default-2{
+    background-color: #262222;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    pacity: 0.6;
+    transition: 0.5s;
+    font-weight: 500;
+    border: none;
+}
+
+.btn-default-2:hover{
+    background-color: #3D3737;
+    color: #ffffff;
+}
+
+.mt-150{
+    margin-top: 150px;
+}
+
+.mt-130{
+    margin-top: 130px;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mt-55{
+    margin-top: 5rem;
+}
+
+.mt-180{
+    margin-top: 77px;
+}
+
+.mt-no-1{
+    margin-top: 0.3rem;
+}
+
+.py-60{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.pe-40{
+    padding-right: 40px;
+}
+
+.ps-20{
+    padding-left: 20px;
+}
+
+.pt-60{
+    padding-top: 4rem;
+}
+
+.mt-c-circle{
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.mt-icon-pink{
+    margin-top: 0.7rem;
+    color: #DA036A;
+}
+
+.mt-n-1{
+    margin-top: -10px;
+}
+
+.fs-50{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.fs-40{
+    font-size: 40px;
+}
+
+.fs-36{
+    font-size: 36px;
+}
+
+.fs-30{
+    font-size: 30px;
+}
+
+.fs-24{
+    font-size: 24px;
+}
+
+.fs-21{
+    font-size: 21px;
+}
+
+.fs-20{
+    font-size: 20px;
+}
+
+.fs-18{
+    font-size: 18px;
+}
+
+.fs-16{
+    font-size: 16px;
+}
+
+.fs-14{
+    font-size: 13px;
+}
+
+.circle-1{
+    width: 5.6em;
+    height: 5.6em;
+    background: #C5789D;
+    border-radius: 100%;
+}
+
+.circle-2{
+    max-width: 10em;
+    height: 6em;
+    background-image: linear-gradient(to left, #01A3BC, #0D5B71);
+    border-radius: 10%;
+    margin-top: 12px;
+}
+
+.circle-3{
+    width: 1.5em;
+    height: 1.5em;
+    background: #DA036A;
+    border-radius: 100%;
+}
+
+.no-plaform-1{
+    width: 24px;
+}
+
+.sosmed-1{
+    margin-top: 3px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #262222;
+    background-color: #FDEFF4;
+}
+
+.image-1{
+    float: right;
+}
+
+.image-2{
+    float: right;
+}
+
+.image-produk{
+    width: 23rem;
+}
+
+.ps-muy{
+    padding-left: 40px;
+}
+
+.image-team{
+    width: 33em;
+}
+
+.icon-pk{
+    width: 90px;
+}
+
+@media (max-width: 1400px) {
+    .fs-18{
+        font-size: 16px;
+    }
+
+    .mt-c-circle{
+        margin-top: 0.8rem;
+    }
+
+    .circle-2{
+        margin-top: 16px;
+    }
+
+    .mt-icon-pink{
+        margin-top: 0.5rem;
+    }
+
+    .fs-20{
+        font-size: 18px;
+    }
+
+    .image-produk{
+        width: 19rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fs-55{
+        font-size: 40px;
+    }
+
+    .fs-40{
+        font-size: 28px;
+    }
+
+    .fs-36{
+        font-size: 25px;
+    }
+
+    .fs-24{
+        font-size: 20px;
+    }
+
+    .fs-21{
+        font-size: 18px;
+    }
+
+    .fs-20{
+        font-size: 16px;
+    }
+
+    .fs-18{
+        font-size: 16px;
+    }
+
+    .fs-16{
+        font-size: 14px;
+    }
+
+    .image-1{
+        margin-top:40px;
+        width: 430px;
+    }
+
+    .mt-150{
+        margin-top: 100px;
+    }
+
+    .mt-100{
+        margin-top: 70px;
+    }
+
+    .ps-20{
+        padding-left: 25px;
+    }
+
+    .no-plaform-1{
+        width: 20px;
+        margin-top: -2px;
+    }
+
+    .circle-2{
+        max-width: 3.7em;
+        height: 2.7em;
+        margin-top: 8px;
+    }
+
+    .mt-icon-pink{
+        margin-top: 0.4rem;
+    }
+
+    .w-image-tema{
+        width: 290px;
+    }
+
+    .btn-default{
+        font-size: 14px;
+    }
+
+    .btn-default-2{
+        font-size: 14px;
+    }
+
+    .image-produk{
+        width: 15.5rem;
+    }
+
+    .image-team{
+        width: 27em;
+    }
+}
+
+@media (max-width: 992px) {
+    .width-icon{
+        width: 3em;
+    }
+
+    .fs-55{
+        font-size: 34px;
+    }
+
+    .fs-40{
+        font-size: 26px;
+    }
+
+    .fs-36{
+        font-size: 30px;
+    }
+
+    .fs-24{
+        font-size: 18px;
+    }
+
+    .fs-21{
+        font-size: 16px;
+    }
+
+    .fs-20{
+        font-size: 14px;
+    }
+
+    .fs-18-mu{
+        font-size: 14px;
+    }
+
+    .fs-16{
+        font-size: 12px;
+    }
+
+    .image-1{
+        margin-top: 50px;
+        width: 300px;
+    }
+
+    .mt-150{
+        margin-top: 80px;
+    }
+
+    .mt-100{
+        margin-top: 70px;
+    }
+
+    .ps-20{
+        padding-left: 25px;
+    }
+
+    .no-plaform-1{
+        width: 18px;
+        margin-top: -2px;
+    }
+
+    .circle-2{
+        max-width: 3.7em;
+        height: 2.7em;
+        margin-top: 8px;
+    }
+
+    .mt-icon-pink{
+        margin-top: 0.4rem;
+    }
+
+    .w-image-tema{
+        width: 290px;
+    }
+
+    .btn-default{
+        font-size: 12px;
+    }
+
+    .btn-default-2{
+        font-size: 12px;
+    }
+
+    .circle-1{
+        width: 2.6em;
+        height: 2.6em;
+    }
+
+    .mt-c-circle{
+        margin-top: 0.3rem;
+    }
+
+    .mu-icon{
+        width: 22px;
+    }
+
+    .image-team{
+        width: 20em;
+    }
+}
+
+@media (max-width: 768px) {
+    .w-image-tema{
+        width: 300px;
+    }
+
+    .image-1{
+        margin-top: 50px;
+        width: 290px;
+    }
+
+    .fs-55{
+        font-size: 30px;
+    }
+
+    .fs-36{
+        font-size: 24px;
+    }
+
+    .fs-30 {
+        font-size: 24px;
+    }
+
+    .fs-21{
+        font-size: 15px;
+    }
+
+    .mt-150{
+        margin-top: 60px;
+    }
+
+    .fs-20{
+        font-size: 16px;
+    }
+
+    .mt-icon-pink{
+        margin-top: 0rem;
+    }
+
+    .circle-2{
+        max-width: 3em;
+        height: 2em;
+        margin-top: 8px;
+    }
+
+    .icon-udas{
+        width: 24px;
+    }
+
+    .image-produk{
+        width: 18rem;
+    }
+
+    .image-team{
+        margin-right:80px;
+        width: 34em;
+    }
+
+    .icon-pk{
+        width: 60px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .pe-40{
+        padding-right: 0px;
+    }
+
+    .image-1{
+        float: none;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        width: 300px;
+    }
+
+    .mt-55{
+        margin-top: 2rem;
+    }
+
+    .w-image-tema{
+        width: 220px;
+    }
+
+    .ps-20{
+        padding-left: 5px;
+    }
+
+    .ps-muy{
+        padding-left: 0px;
+    }
+
+    .image-produk{
+        width: 25rem;
+    }
+
+    .image-team{
+        margin-right:0px;
+        width: 34em;
+    }
+}
+
+@media (min-width: 325px) and (max-width: 469px) {
+    .ps-muy{
+        padding-left: 10px;
+    }
+
+    .mt-n-1{
+        margin-top: 0px;
+    }
+
+    .w-image-tema{
+        width: 100%;
+    }
+
+    .fs-40 {
+        font-size: 32px;
+    }
+
+    .ps-20 {
+        padding-left: 20px;
+    }
+
+    .mt-130{
+        margin-top: 80px;
+    }
+
+    .mt-100{
+        margin-top: 50px;
+    }
+
+    .image-produk{
+        width: 18rem;
+    }
+
+    .image-team{
+        margin-right:0px;
+        width: 21em;
+    }
+
+    .icon-pk{
+        margin-top:10px;
+        width: 40px;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 324px) {
+    .ps-muy{
+        padding-left: 10px;
+    }
+
+    .mt-n-1{
+        margin-top: 0px;
+    }
+
+    .w-image-tema{
+        width: 100%;
+    }
+
+    .fs-40 {
+        font-size: 32px;
+    }
+
+    .ps-20 {
+        padding-left: 20px;
+    }
+
+    .image-produk{
+        width: 18rem;
+    }
+
+}
