@@ -228,6 +228,17 @@
     width: 90px;
 }
 
+.main-center {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.text-align-left    { text-align: left;}
+.text-align-right   { text-align: right;}
+.text-align-center  { text-align: center;}
+.text-align-justify { text-align: justify;}
+
 @media (max-width: 1400px) {
     .fs-18{
         font-size: 16px;
