@@ -200,8 +200,8 @@
 }
 
 .accordion-button:not(.collapsed) {
-    color: #262222;
-    background-color: #FDEFF4;
+    color: #fff;
+    background-color: #01A2BB;
 }
 
 .image-1{
