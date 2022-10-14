@@ -29,13 +29,17 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/faq', [HomeController::class, 'faq']);
-Route::get('/penawaran', [HomeController::class, 'penawaran']);
 Route::get('/pelayanan', [HomeController::class, 'pelayanan']);
 Route::get('/portofolio', [HomeController::class, 'portofolio']);
 Route::get('/produk', [HomeController::class, 'produk']);
 Route::get('/proses', [HomeController::class, 'proses']);
 Route::get('/team', [HomeController::class, 'team']);
 Route::get('/tentang', [HomeController::class, 'tentang']);
+
+Route::controller(PenawaranController::class)->group(function () {
+    Route::get('/penawaran', 'penawaran');
+    Route::post('/penawaran/store', 'store')->name('penawaran.store');
+});
 
 
 Route::controller(RegisterController::class)->group(function () {

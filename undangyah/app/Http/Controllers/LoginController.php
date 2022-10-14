@@ -34,10 +34,10 @@ class LoginController extends Controller
         if (Auth::attempt($kredensial)) {
             $user = Auth::user();
             if ($user) {
-                return redirect()->intended('home');
+                return redirect()->intended('dashboard');
             }
 
-            return redirect()->intended('/');
+            return redirect()->intended('/dashboard');
         }
 
 

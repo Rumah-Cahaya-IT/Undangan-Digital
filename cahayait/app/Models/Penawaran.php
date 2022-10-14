@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Penawaran extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'prusahaan',
+        'email',
+        'no_hp',
+        'judul_proyek',
+        'deskripsi',
+        'bedget',
+        'level',
+        'status',
+        'file',
+    ];
 }

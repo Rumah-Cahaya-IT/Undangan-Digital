@@ -28,13 +28,6 @@ class HomeController extends Controller
         ]);
     }
 
-    public function penawaran()
-    {
-        return view('pages.client.penawaran')->with([
-            'user' => Auth::user()
-        ]);
-    }
-
     public function portofolio()
     {
         return view('pages.client.portofolio')->with([

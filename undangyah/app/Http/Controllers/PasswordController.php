@@ -13,4 +13,11 @@ class PasswordController extends Controller
             'user' => Auth::user()
         ]);
     }
+
+    public function edit()
+    {
+        return view('pages.client.password.create')->with([
+            'user' => Auth::user()
+        ]);
+    }
 }

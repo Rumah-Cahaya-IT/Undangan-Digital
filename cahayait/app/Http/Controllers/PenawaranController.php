@@ -31,15 +31,16 @@ class PenawaranController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePenawaranRequest  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function penawaran()
+    {
+        return view('pages.client.penawaran')->with([
+            'user' => Auth::user()
+        ]);
+    }
+
     public function store(StorePenawaranRequest $request)
     {
-        //
+        dd($request);
     }
 
     /**

@@ -7,6 +7,21 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MempelaiController;
+use App\Http\Controllers\MempelaipriaController;
+use App\Http\Controllers\MempelaiwanitaController;
+use App\Http\Controllers\InfoacaraController;
+use App\Http\Controllers\TamuController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\CeritaController;
+use App\Http\Controllers\MusikController;
+use App\Http\Controllers\MusiksController;
+use App\Http\Controllers\MapsController;
+use App\Http\Controllers\KadoController;
+use App\Http\Controllers\UcapanController;
+use App\Http\Controllers\TemaController;
+use App\Http\Controllers\TemasController;
+use App\Http\Controllers\PengaturanController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -49,7 +64,43 @@ Route::controller(PasswordController::class)->group(function () {
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cekUserLogin:1']], function () {
+
         Route::resource('dashboard', DashboardController::class);
+
+        Route::get('mempelai-pria', [MempelaipriaController::class, 'index']);
+
+        Route::get('mempelai-wanita', [MempelaiwanitaController::class, 'index']);
+
+        Route::get('informasi-acara', [InfoacaraController::class, 'index']);
+
+        Route::get('tamu-undangan', [TamuController::class, 'index']);
+        Route::get('tambah-tamu-undangan', [TamuController::class, 'create']);
+
+        Route::get('galeri', [GaleriController::class, 'index']);
+
+        Route::get('cerita-cinta', [CeritaController::class, 'index']);
+
+        Route::get('musik', [MusikController::class, 'index']);
+
+        Route::get('maps', [MapsController::class, 'index']);
+
+        Route::get('kado', [KadoController::class, 'index']);
+
+        Route::get('doa-dan-ucapan', [UcapanController::class, 'index']);
+
+        Route::get('pilih-tema', [TemaController::class, 'index']);
+
+        Route::get('musiks', [MusiksController::class, 'index']);
+
+        Route::get('temas', [TemasController::class, 'index']);
+
+        Route::get('pengaturan-akun', [PengaturanController::class, 'index']);
+
+        Route::get('transaksi', [TransaksiController::class, 'index']);
+
+        Route::get('edit-password', [PasswordController::class, 'edit']);
+
+        Route::get('hitory-transaksi', [TransaksiController::class, 'index']);
     });
 
     Route::group(['middleware' => ['cekUserLogin:2']], function () {

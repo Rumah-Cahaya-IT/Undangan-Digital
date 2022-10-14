@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Lupa Password')
+@section('title', 'Register')
 
 @section('content')
 
