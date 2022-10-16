@@ -10,6 +10,7 @@ use App\Http\Controllers\PengaturanController;
 use App\Http\Controllers\TransaksiController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ManagementAkunController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -37,10 +38,9 @@ Route::get('/team', [HomeController::class, 'team']);
 Route::get('/tentang', [HomeController::class, 'tentang']);
 
 Route::controller(PenawaranController::class)->group(function () {
-    Route::get('/penawaran', 'penawaran');
+    Route::get('/penawaran-clien', 'penawaran')->name('penawaran');
     Route::post('/penawaran/store', 'store')->name('penawaran.store');
 });
-
 
 Route::controller(RegisterController::class)->group(function () {
     Route::get('register', 'index')->name('register');
@@ -61,7 +61,16 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::resource('dashboard', DashboardController::class);
 
-        Route::get('penawaran-clien', [PenawaranController::class, 'index']);
+        Route::controller(PenawaranController::class)->group(function () {
+            Route::get('/penawarans', 'index')->name('index');
+            Route::get('/penawarans-edit/{id}', 'edit')->name('penawarans_edit.edit');
+            Route::put('/penawarans-put/{id}', 'update')->name('penawarans_put.update');
+            Route::delete('/penawarans-delete/{id}',  'destroy')->name('penawarans_delete.destroy');
+        });
+
+        Route::get('/management-akun', [ManagementAkunController::class, 'index'])->name('management-akun.index');
+        Route::put('/management-akun/{id}', [ManagementAkunController::class, 'update'])->name('management-akun.update');
+        Route::delete('/management-akun/{user}', [ManagementAkunController::class, 'destroy'])->name('management-akun.destroy');
 
         Route::get('pengaturan-akun', [PengaturanController::class, 'index']);
 

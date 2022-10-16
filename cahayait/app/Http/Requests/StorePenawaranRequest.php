@@ -13,7 +13,7 @@ class StorePenawaranRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class StorePenawaranRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'file' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Nama wajib diisi',
+            'prusahaan.required' => 'Prusahaan wajib diisi',
         ];
     }
 }

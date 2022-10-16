@@ -38,11 +38,11 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <label for="budget" class="form-label">Estimasi Budget</label>
-                            <input type="budget" class="form-control" name="budget" id="budget" placeholder="lima juta" required>
+                            <label for="bedget" class="form-label">Estimasi Bedget</label>
+                            <input type="bedget" class="form-control" name="bedget" id="bedget" placeholder="lima juta" required>
                         </div>
                         <div class="col-sm-6">
-                            <label for="budget" class="form-label">Tingkat Penawaran</label>
+                            <label for="level" class="form-label">Tingkat Penawaran</label>
                             <select class="form-select" name="level" id="level" aria-label="Default select example">
                                 <option selected>Tingkat Penawaran</option>
                                 <option value="1">Penting</option>

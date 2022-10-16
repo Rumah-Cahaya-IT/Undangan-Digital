@@ -4,7 +4,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="logo">
                             <a href="{{ url('dashboard') }}">
-                                <img src="asset/image/logo.svg" alt="logo"> Cahaya IT
+                                <img src="{{ asset('/') }}asset/image/logo.svg" alt="logo"> Cahaya IT
                             </a>
                         </div>
                         <div class="toggler">
@@ -22,9 +22,16 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="{{ url('penawaran-clien') }}" class='sidebar-link'>
+                            <a href="{{ url('penawarans') }}" class='sidebar-link'>
                                 <i class="bi bi-envelope-fill"></i>
                                 <span>Penawaran</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="{{ url('management-akun') }}" class='sidebar-link'>
+                                <i class="bi bi-people-fill"></i>
+                                <span>Users</span>
                             </a>
                         </li>
 
