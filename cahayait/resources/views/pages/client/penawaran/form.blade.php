@@ -15,7 +15,7 @@
                     <div class="card-content">
                         <div class="card-body">
                             <form class="form"
-                                action="{{ isset($penawaran) ? route('penawarans_put.update', $penawaran) : route('penawaran.store') }}"
+                                action="{{ isset($penawaran) ? route('penawarans_put.update', $penawaran->id) : route('penawaran.store') }}"
                                 method="post">
                                 @csrf
                                 @isset($penawaran)
