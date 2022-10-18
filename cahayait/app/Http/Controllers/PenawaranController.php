@@ -72,7 +72,7 @@ class PenawaranController extends Controller
      */
     public function show(Penawaran $penawaran)
     {
-        //
+        return view('pages.client.penawaran.show', compact('penawaran'));
     }
 
     /**
