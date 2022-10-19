@@ -41,7 +41,7 @@
                                         <td class="p-4 d-flex align-items-center">
                                             <a href="{{ route('penawaran.show', $penawaran) }}" title="edit news"><i class="bi bi-zoom-in"></i></a> &ensp;&ensp;
                                             <a href="{{ route('penawaran_edit.edit', $penawaran) }}" title="edit news"><i class="bi bi-pen-fill"></i></a>  &ensp;
-                                            <form method="POST" action="{{ route('penawarans_delete.destroy', $penawaran->id) }}">
+                                            <form method="POST" action="{{ route('penawaran_delete.destroy', $penawaran->id) }}">
                                                 @csrf
                                                 @method('delete')
                                                 <input name="_method" type="hidden" value="DELETE">

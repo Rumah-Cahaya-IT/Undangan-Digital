@@ -66,7 +66,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/detail/{penawaran:id}',  'show')->name('penawaran.show');
             Route::get('/penawaran-edit/{penawaran:id}', 'edit')->name('penawaran_edit.edit');
             Route::put('/penawarans-put/{id}', 'update')->name('penawarans_put.update');
-            Route::delete('/penawarans-delete/{id}',  'destroy')->name('penawarans_delete.destroy');
+            Route::delete('/penawaran-delete/{penawaran:id}',  'destroy')->name('penawaran_delete.destroy');
         });
 
         Route::get('/management-akun', [ManagementAkunController::class, 'index'])->name('management-akun.index');

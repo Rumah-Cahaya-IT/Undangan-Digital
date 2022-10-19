@@ -6,6 +6,12 @@
 
     <section class="mt-130">
         <div class="container main-center">
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <p class="fs-40 lh-sm fw-bold">Dapatkan Penawaran</p>
             <main class="flex-shrink-0">
                 <form class="needs-validation" action="{{ route('penawaran.store') }}" method="post" enctype="multipart/form-data">

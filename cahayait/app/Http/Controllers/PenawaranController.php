@@ -61,7 +61,7 @@ class PenawaranController extends Controller
         ]);
 
         $file->move('penawaran', $file->getClientOriginalName());
-        return redirect('/penawaran')->with(['success' => 'Penawaran berhasil diajukan']);
+        return redirect('/penawaran-clien')->with(['success' => 'Penawaran berhasil diajukan']);
     }
 
     /**
@@ -108,7 +108,6 @@ class PenawaranController extends Controller
      */
     public function destroy(Penawaran $penawaran)
     {
-        dd($penawaran);
         File::delete('penawaran/' . $penawaran->file);
 
         $penawaran->delete();
