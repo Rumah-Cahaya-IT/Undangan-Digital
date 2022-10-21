@@ -41,7 +41,7 @@
                                         <div class="form-group">
                                             <label for="no_hp">Telephone</label>
                                             <input type="text" id="no_hp" class="form-control" name="no_hp" required
-                                                value="{{ isset($penawaran) ? $penawaran->email : '' }}">
+                                                value="{{ isset($penawaran) ? $penawaran->no_hp : '' }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="judul_proyek">Judul Proyek</label>
@@ -58,27 +58,25 @@
                                             <input type="text" id="bedget" class="form-control" name="bedget" required
                                                 value="{{ isset($penawaran) ? $penawaran->bedget : '' }}">
                                         </div>
-{{--
                                         <div class="form-group">
-                                            <label for="type_job_id">Tipe Pekerjaan</label>
-                                            <select name="type_job_id" id="type_job_id" class="form-control">
-                                                @foreach($type_jobs as $id => $name)
-                                                <option value="{{ $id }}" @isset($job) @if($id==$job->type_job->id)
-                                                    selected @endif @endisset>{{ $name }}</option>
-                                                @endforeach
+                                            <label for="level">Level</label>
+                                            <select class="form-control" name="status_kerja" id="status_kerja">
+                                               <option value="1"
+                                                {{ isset($penawaran) && $penawaran->bedget == 'Penting' ? 'selected' : '' }}
+                                               >Penting</option>
+                                               <option value="2"
+                                               {{ isset($penawaran) && $penawaran->bedget == 'Sedang' ? 'selected' : '' }}
+                                               >Sedang</option>
+                                               <option value="3"
+                                               {{ isset($penawaran) && $penawaran->bedget == 'Biasa' ? 'selected' : '' }}
+                                               >Biasa</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="company">Perusahaan</label>
-                                            <select name="company_id" id="company" class="form-control">
-                                                @foreach($companies as $id => $name)
-                                                <option value="{{ $id }}" @isset($job) @if($id==$job->company->id)
-                                                    selected @endif @endisset>{{ $name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div> --}}
+                                            <label for="formFile" class="form-label">Lampirkan File</label>
+                                            <input class="form-control" type="file" autocomplete="off" name="file" id="file">
+                                        </div>
                                     </div>
-
                                     <div class="col-12 d-flex justify-content-start">
                                         <button type="submit" class="btn btn-primary me-1 mb-1">Simpan</button>
                                     </div>
