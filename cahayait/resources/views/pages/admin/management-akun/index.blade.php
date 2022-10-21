@@ -18,7 +18,7 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Role Level</th>
-                            <th>Aksi</th>
+                            {{-- <th>Aksi</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -36,7 +36,7 @@
                                         <span class="badge bg-info">Vendor</span>
                                     @endif
                             </td>
-                            <td class="d-flex align-items-center">
+                            {{-- <td class="d-flex align-items-center">
                                 <div class="dropdown">
                                     <a class="dropdown-toggle me-1" title="edit akun" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="bi bi-pen-fill"></i>
@@ -48,7 +48,7 @@
                                     <input name="_method" type="hidden" value="DELETE">
                                     <button type="submit" class="p-1 border-0 show_confirm" style="background: transparent; color: #435ebe;" data-toggle="tooltip" title='hapus akun'><i class="bi bi-trash-fill"></i></button>
                                 </form>
-                            </td>
+                            </td> --}}
                         </tr>
                         @endforeach
                     </tbody>
