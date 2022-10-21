@@ -15,8 +15,8 @@
                     <div class="card-content">
                         <div class="card-body">
                             <form class="form"
-                                action="{{ isset($penawaran) ? route('penawarans_put.update', $penawaran->id) : route('penawaran.store') }}"
-                                method="post">
+                                action="{{ isset($penawaran) ? route('penawaran_put.update', $penawaran->id) : route('penawaran.store') }}"
+                                method="post" enctype="multipart/form-data">
                                 @csrf
                                 @isset($penawaran)
                                 @method('put')
@@ -48,10 +48,12 @@
                                             <input type="text" id="judul_proyek" class="form-control" name="judul_proyek" required
                                                 value="{{ isset($penawaran) ? $penawaran->judul_proyek : '' }}">
                                         </div>
-                                        <div class="col-md-9 mt-2 mb-4">
-                                            <label for="deskripsi">Keterangan</label>
-                                            <textarea name="deskripsi" id="deskripsi"
-                                                required>{!! isset($penawaran) ? $penawaran->deskripsi : '' !!}</textarea>
+                                        <div class="form-group">
+                                            <label for="judul_proyek">Keterangan</label>
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="deskripsi" name="deskripsi" style="height: 100px">{!! isset($penawaran) ? $penawaran->deskripsi : '' !!}</textarea>
+                                                <label for="floatingTextarea2">Keterangan</label>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="bedget">Bedget</label>
@@ -60,21 +62,21 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="level">Level</label>
-                                            <select class="form-control" name="status_kerja" id="status_kerja">
+                                            <select class="form-control" name="level" id="level">
                                                <option value="1"
-                                                {{ isset($penawaran) && $penawaran->bedget == 'Penting' ? 'selected' : '' }}
+                                                {{ isset($penawaran) && $penawaran->level == '1' ? 'selected' : '' }}
                                                >Penting</option>
                                                <option value="2"
-                                               {{ isset($penawaran) && $penawaran->bedget == 'Sedang' ? 'selected' : '' }}
+                                               {{ isset($penawaran) && $penawaran->level == '2' ? 'selected' : '' }}
                                                >Sedang</option>
                                                <option value="3"
-                                               {{ isset($penawaran) && $penawaran->bedget == 'Biasa' ? 'selected' : '' }}
+                                               {{ isset($penawaran) && $penawaran->level == '3' ? 'selected' : '' }}
                                                >Biasa</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="formFile" class="form-label">Lampirkan File</label>
-                                            <input class="form-control" type="file" autocomplete="off" name="file" id="file">
+                                            <input class="form-control" type="file" autocomplete="off" name="file" id="file" value="{{ isset($penawaran) ? $penawaran->file : '' }}">
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-start">

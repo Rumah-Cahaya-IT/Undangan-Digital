@@ -65,7 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/penawarans', 'index')->name('index');
             Route::get('/detail/{penawaran:id}',  'show')->name('penawaran.show');
             Route::get('/penawaran-edit/{penawaran:id}', 'edit')->name('penawaran_edit.edit');
-            Route::put('/penawarans-put/{id}', 'update')->name('penawarans_put.update');
+            Route::put('/penawaran-put/{penawaran:id}', 'update')->name('penawaran_put.update');
             Route::delete('/penawaran-delete/{penawaran:id}',  'destroy')->name('penawaran_delete.destroy');
         });
 

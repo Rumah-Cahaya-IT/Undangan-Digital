@@ -9,6 +9,7 @@ use App\Models\Penawaran;
 use GuzzleHttp\Psr7\Request as Psr7Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class PenawaranController extends Controller
 {
@@ -95,9 +96,32 @@ class PenawaranController extends Controller
      * @param  \App\Models\Penawaran  $penawaran
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePenawaranRequest $request, Penawaran $penawaran)
+    public function update(Penawaran $penawaran)
     {
-        //
+        $data = request()->all();
+        $file = request()->file('file');
+
+        if ($file == '') {
+            $penawaran->update([
+                'name' => $data['name'],
+                'prusahaan' => $data['prusahaan'],
+                'email' => $data['email'],
+                'no_hp' => $data['no_hp'],
+                'judul_proyek' => $data['judul_proyek'],
+                'deskripsi' => $data['deskripsi'],
+                'bedget' => $data['bedget'],
+                'level' => $data['level'],
+            ]);
+        } else {
+            $data['file'] = Str::random(20) . '.' . $file->getClientOriginalExtension();
+
+            File::delete('penawaran' . $penawaran->file);
+            $file->move('penawaran', $data['file']);
+        }
+
+        $penawaran->update($data);
+
+        return back()->with(['success' => 'Penawaran berhasil diupdate']);
     }
 
     /**
