@@ -115,7 +115,7 @@ class PenawaranController extends Controller
         } else {
             $data['file'] = Str::random(20) . '.' . $file->getClientOriginalExtension();
 
-            File::delete('penawaran' . $penawaran->file);
+            File::delete('penawaran/' . $penawaran->file);
             $file->move('penawaran', $data['file']);
         }
 
