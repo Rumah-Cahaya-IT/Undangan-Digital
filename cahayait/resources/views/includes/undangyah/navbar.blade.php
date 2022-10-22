@@ -38,7 +38,7 @@
                             <li><a class="dropdown-item" href="{{ url('tentang') }}">Tentang Cahaya IT</a></li>
                             <li><a class="dropdown-item" href="{{ url('portofolio') }}">Portofolio</a></li>
                             <li><a class="dropdown-item" href="{{ url('team') }}">Team</a></li>
-                            <li><a class="dropdown-item" href="https://linktr.ee/wh.store">Hubungi Kami</a></li>
+                            <li><a class="dropdown-item" href="https://linktr.ee/cahayait">Hubungi Kami</a></li>
                             <li><a class="dropdown-item" href="{{ url('faq') }}">FAQ</a></li>
                         </ul>
                     </li>
