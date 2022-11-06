@@ -39,7 +39,7 @@
         </div>
         <div class="mb-3">
             <label for="nama" class="form-label">Nama Panggilan</label>
-            <input type="nama" class="form-control" id="nama" placeholder="Nama panggilan mempelai pria">
+            <input type="nama" class="form-control" id="nama" placeholder="Nama panggilan mempelai pria" value="">
         </div>
         <div class="mb-3">
             <label for="panggilan" class="form-label">Nama Lengkap</label>

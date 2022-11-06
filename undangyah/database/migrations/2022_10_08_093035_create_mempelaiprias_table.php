@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mempelaipria', function (Blueprint $table) {
+        Schema::create('mempelaiprias', function (Blueprint $table) {
             $table->id();
             $table->string('image');
             $table->string('nama');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('nama_ibu');
             $table->string('instagram')->nullable();
             $table->string('facebook')->nullable();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('users_id');
             $table->timestamps();
         });
     }

@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Mempelaipria extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'image',
+        'nama',
+        'panggilan',
+        'nama_ayah',
+        'nama_ibu',
+        'instagram',
+        'facebook',
+        'users_id'
+    ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

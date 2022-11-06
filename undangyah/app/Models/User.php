@@ -43,4 +43,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function mempelai_pria()
+    {
+        return $this->hasMany(Mempelaipria::class, 'users_id');
+    }
 }

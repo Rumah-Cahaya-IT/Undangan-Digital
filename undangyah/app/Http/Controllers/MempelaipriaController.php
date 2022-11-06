@@ -6,6 +6,7 @@ use App\Http\Requests\StoreMempelaipriaRequest;
 use App\Http\Requests\UpdateMempelaipriaRequest;
 use App\Models\Mempelaipria;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class MempelaipriaController extends Controller
 {
@@ -16,7 +17,13 @@ class MempelaipriaController extends Controller
      */
     public function index()
     {
-        return view('pages.client.mempelaipria.create')->with([
+        $items = Mempelaipria::with('users')
+        ->login()
+        ->first();
+
+        dd($items);
+
+        return view('pages.client.mempelaipria.create', compact('items'))->with([
             'user' => Auth::user()
         ]);
     }
