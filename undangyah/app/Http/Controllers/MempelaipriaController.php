@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateMempelaipriaRequest;
 use App\Models\Mempelaipria;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class MempelaipriaController extends Controller
 {
@@ -17,13 +18,9 @@ class MempelaipriaController extends Controller
      */
     public function index()
     {
-        $items = Mempelaipria::with('users')
-        ->login()
+        $mempelai_pria = Mempelaipria::with('users')
         ->first();
-
-        dd($items);
-
-        return view('pages.client.mempelaipria.create', compact('items'))->with([
+        return view('pages.client.mempelaipria.create', compact('mempelai_pria'))->with([
             'user' => Auth::user()
         ]);
     }
@@ -80,9 +77,29 @@ class MempelaipriaController extends Controller
      * @param  \App\Models\Mempelaipria  $mempelaipria
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMempelaipriaRequest $request, Mempelaipria $mempelaipria)
+    public function update(Mempelaipria $mempelai_pria)
     {
-        //
+        $data = request()->all();
+        $image = request()->file('image');
+
+        if ($image == '') {
+            $mempelai_pria->update([
+                'nama' => $data['nama'],
+                'panggilan' => $data['panggilan'],
+                'nama_ayah' => $data['nama_ayah'],
+                'nama_ibu' => $data['nama_ibu'],
+                'instagram' => $data['instagram'],
+                'facebook' => $data['facebook'],
+            ]);
+        } else {
+            $data['image'] = Str::random(20) . '.' . $image->getClientOriginalExtension();
+
+            File::delete('mempelaipria/' . $mempelai_pria->image);
+            $image->move('mempelaipria', $data['image']);
+        }
+
+        $mempelai_pria->update($data);
+        return back()->with(['success' => 'Berhasil diupdate']);
     }
 
     /**
