@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cerita', function (Blueprint $table) {
+        Schema::create('pilih_temas', function (Blueprint $table) {
             $table->id();
-            $table->string('status_cerita');
-            $table->string('cerita');
-            $table->string('status_lamaran');
-            $table->string('lamaran');
-            $table->string('status_nikah');
-            $table->string('nikah');
-            $table->unsignedBigInteger('user_id');
+            $table->string('tema_id');
+            $table->unsignedBigInteger('users_id');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cerita');
+        Schema::dropIfExists('pilih_temas');
     }
 };

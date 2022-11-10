@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Mempelaipria::class, 'users_id');
     }
+
+    public function mempelai_wanita()
+    {
+        return $this->hasMany(Mempelaiwanita::class, 'users_id');
+    }
 }

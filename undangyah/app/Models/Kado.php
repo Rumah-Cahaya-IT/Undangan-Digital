@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Kado extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'cerita',
+        'users_id'
+    ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

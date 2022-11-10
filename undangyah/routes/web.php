@@ -71,6 +71,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::put('/mempelai-pria/{mempelai_pria}', [MempelaipriaController::class, 'update'])->name('mempelai-pria.update');
 
         Route::get('mempelai-wanita', [MempelaiwanitaController::class, 'index']);
+        Route::put('/mempelai-wanita/{mempelai_wanita}', [MempelaiwanitaController::class, 'update'])->name('mempelai-wanita.update');
 
         Route::get('informasi-acara', [InfoacaraController::class, 'index']);
 

@@ -13,16 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mempelaiwanita', function (Blueprint $table) {
+        Schema::create('galeris', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('nama');
-            $table->string('panggilan');
-            $table->string('nama_ayah');
-            $table->string('nama_ibu');
-            $table->string('instagram')->nullable();
-            $table->string('facebook')->nullable();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('users_id');
             $table->timestamps();
         });
     }
@@ -34,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mempelaiwanita');
+        Schema::dropIfExists('galeris');
     }
 };

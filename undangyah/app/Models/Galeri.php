@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galeri extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'image',
+        'users_id'
+    ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

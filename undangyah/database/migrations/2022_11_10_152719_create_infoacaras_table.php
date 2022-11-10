@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('infoacara', function (Blueprint $table) {
+        Schema::create('infoacaras', function (Blueprint $table) {
             $table->id();
             $table->string('zona');
             $table->string('status_akad');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('tanggal_resepsi');
             $table->string('waktu_resepsi');
             $table->string('alamat_resepsi');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('users_id');
             $table->timestamps();
         });
     }
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infoacara');
+        Schema::dropIfExists('infoacaras');
     }
 };

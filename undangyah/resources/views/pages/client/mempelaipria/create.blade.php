@@ -23,7 +23,7 @@
                                 </svg>&nbsp; Lihat Website
         </a>
     </div>
-    <form class="form" action="{{ route('mempelai-pria.update', $mempelai_pria) }}" method="post">
+    <form class="form" action="{{ route('mempelai-pria.update', $mempelai_pria) }}" method="post" enctype="multipart/form-data">
     @csrf
     @isset($mempelai_pria)
     @method('put')
@@ -35,7 +35,7 @@
             </p>
             <hr class="border border-danger border-2 opacity-50">
             <div class="text-center">
-                <img src="asset/image/pria.png" width="300">
+                <img src="{{ asset('mempelaipria/' . $mempelai_pria->image) }}" width="300">
             </div>
             <div class="mb-3">
                 <label for="formFile" class="form-label">Foto Mempelai Pria</label>

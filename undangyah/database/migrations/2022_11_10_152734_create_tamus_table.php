@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('doa', function (Blueprint $table) {
+        Schema::create('tamus', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('ucapan');
-            $table->string('kehadiran');
-            $table->unsignedBigInteger('user_id');
+            $table->string('alamat');
+            $table->string('no_hp', 13);
+            $table->unsignedBigInteger('users_id');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doa');
+        Schema::dropIfExists('tamus');
     }
 };
