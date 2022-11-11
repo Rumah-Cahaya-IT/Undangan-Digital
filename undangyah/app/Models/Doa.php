@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Musik extends Model
+class Doa extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'musik',
+        'nama',
+        'ucapan',
+        'kehadiran',
         'users_id'
     ];
 
