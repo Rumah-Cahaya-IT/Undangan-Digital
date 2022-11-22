@@ -34,4 +34,11 @@ class HomeController extends Controller
             'user' => Auth::user()
         ]);
     }
+
+    public function form()
+    {
+        return view('pages.client.form')->with([
+            'user' => Auth::user()
+        ]);
+    }
 }

@@ -45,6 +45,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/fitur', [HomeController::class, 'fitur']);
 Route::get('/tema', [HomeController::class, 'tema']);
 Route::get('/harga', [HomeController::class, 'harga']);
+Route::get('/form', [HomeController::class, 'form']);
 
 Route::get('/home', [LayoutController::class, 'index'])->middleware('auth');
 
